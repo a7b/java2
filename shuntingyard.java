@@ -83,7 +83,7 @@ public class ShuntingYard {
     
     // Can a reduction be done?
     private static boolean canReduce(String op) {
-        if (operators.size() == 0) {
+        if (operators.size() == 0 || op.equals("(")) {
             return false;
         }
         String lastOp = operators.get(operators.size() - 1);
